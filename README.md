@@ -1,4 +1,5 @@
 <<<<<<< HEAD
 =======
 # super_resolution
->>>>>>> 536a27e (Initial commit)
+
+The test image and model are from https://github.com/Luchixiang/EMDiffuse
