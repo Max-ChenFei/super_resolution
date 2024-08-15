@@ -35,6 +35,7 @@ def create_model():
     opt = Praser.parse(config)
     opt['world_size'] = 1
     opt['gpu_ids'] = [0]
+    opt['seed'] = 1
     Util.set_seed(opt['seed'])
     model = create_EMDiffuse(opt)
     return model
