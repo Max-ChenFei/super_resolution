@@ -3,7 +3,7 @@ import torch
 import warnings
 from ..core import logger as Logger
 from ..core import base_model as BaseModel
-from Logger import VisualWriter, InfoLogger
+from ..core.logger import VisualWriter, InfoLogger
 from ..core import praser as Praser
 from ..core import util as Util
 from ..data import define_dataloader
