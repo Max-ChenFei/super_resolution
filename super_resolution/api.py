@@ -7,7 +7,7 @@ import urllib
 import zipfile
 from .core import praser as Praser
 from .models import create_EMDiffuse
-from emdiffuse_conifg import EMDiffuseConfig
+from .emdiffuse_conifg import EMDiffuseConfig
 from .core import util as Util
 import torch
 from torchvision import transforms
