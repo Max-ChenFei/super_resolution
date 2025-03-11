@@ -31,7 +31,7 @@ def create_model():
     if not os.path.exists(dummy_dir):
         os.makedirs(dummy_dir)
     
-    config = EMDiffuseConfig(config='config/EMDiffuse-r.json', path=dummy_dir, batch_size=1, phase='test', mean=1, resume='./experiments/EMDiffuse-r/best', step=200)
+    config = EMDiffuseConfig(config='.config/EMDiffuse-r.json', path=dummy_dir, batch_size=1, phase='test', mean=1, resume='./experiments/EMDiffuse-r/best', step=200)
     opt = Praser.parse(config)
     opt['world_size'] = 1
     opt['gpu_ids'] = [0]
