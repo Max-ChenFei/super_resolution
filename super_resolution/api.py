@@ -3,22 +3,10 @@ A Python API for the EMDiffuse Super-Resolution model that processes data
  directly as input and provides output without relying on file I/O.
 """
 import os
-current_directory = os.getcwd()  # Get current directory
-files = [f for f in os.listdir(current_directory) if os.path.isfile(os.path.join(current_directory, f))]
-
-print("Files in current directory:")
-for file in files:
-    print(file)
 import urllib
 import zipfile
-from pathlib import Path
-
-current_directory = Path.cwd()  # Get the current directory
-folders = [folder for folder in current_directory.iterdir() if folder.is_dir()]
-
-print(folders)
-from .models import create_EMDiffuse
 from .core import praser as Praser
+from .models import create_EMDiffuse
 from emdiffuse_conifg import EMDiffuseConfig
 from .core import util as Util
 import torch

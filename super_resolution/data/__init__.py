@@ -5,8 +5,8 @@ from torch.utils.data.distributed import DistributedSampler
 from torch import Generator, randperm
 from torch.utils.data import DataLoader, Subset
 
-import core.util as Util
-from core.praser import init_obj
+from ..core import util as Util
+from ..core.praser import init_obj
 from vEM_test_pre import recon_pre
 
 
