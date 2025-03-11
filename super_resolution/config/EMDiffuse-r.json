@@ -68,7 +68,7 @@
 
     "model": { // networks/metrics/losses/optimizers/lr_schedulers is a list and model is a dict
         "which_model": { // import designated  model(trainer) using arguments
-            "name": ["models.EMDiffuse_model", "DiReP"], // import Model() class / function(not recommend) from models.EMDiffuse_model.py (default is [models.EMDiffuse_model.py])
+            "name": ["super_resolution.models.EMDiffuse_model", "DiReP"], // import Model() class / function(not recommend) from models.EMDiffuse_model.py (default is [models.EMDiffuse_model.py])
             "args": {
                 "sample_num": 8, // process of each image
                 "task": "denoise",
@@ -84,7 +84,7 @@
         },
         "which_networks": [ // import designated list of networks using arguments
             {
-                "name": ["models.EMDiffuse_network", "Network"],  // import Network() class / function(not recommend) from default file (default is [models/EMDiffuse_network.py])
+                "name": ["super_resolution.models.EMDiffuse_network", "Network"],  // import Network() class / function(not recommend) from default file (default is [models/EMDiffuse_network.py])
                 "args": { // arguments to initialize network
                     "init_type": "kaiming", // method can be [normal | xavier| xavier_uniform | kaiming | orthogonal], default is kaiming
                     "module_name": "guided_diffusion", // sr3 | guided_diffusion
