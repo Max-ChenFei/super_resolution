@@ -5,8 +5,8 @@ A Python API for the EMDiffuse Super-Resolution model that processes data
 import os
 import urllib
 import zipfile
-from .core import praser as Praser
 from .models import create_EMDiffuse
+from .core import praser as Praser
 from emdiffuse_conifg import EMDiffuseConfig
 from .core import util as Util
 import torch
