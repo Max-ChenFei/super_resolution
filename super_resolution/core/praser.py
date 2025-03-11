@@ -34,7 +34,6 @@ def init_obj(opt, logger, *args, default_file_name='default file', given_module=
     if given_module is not None:
         module = given_module
     else:
-        print(file_name)
         module = importlib.import_module(file_name)
 
     attr = getattr(module, class_name)
