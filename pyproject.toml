@@ -15,3 +15,9 @@ dependencies = []  # Add dependencies here
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["super_resolution*"]
+
+[tool.setuptools.package-data]
+super_resolution = ["config/*.json"]  # Include JSON files in the package
+
+[tool.setuptools.include-package-data]
+value = true  # Ensures non-Python files are included
