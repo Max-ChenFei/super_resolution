@@ -44,7 +44,7 @@ def define_dataset(logger, opt):
         if opt['task'] == '3d_reconstruction':
             dataset_opt['args']['data_root'] = recon_pre(dataset_opt['args']['data_root'])
 
-    phase_dataset = init_obj(dataset_opt, logger, default_file_name='data.dataset', init_type='Dataset')
+    phase_dataset = init_obj(dataset_opt, logger, default_file_name='super_resolution.data.dataset', init_type='Dataset')
     val_dataset = None
 
     valid_len = 0
