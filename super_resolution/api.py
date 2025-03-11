@@ -5,12 +5,6 @@ A Python API for the EMDiffuse Super-Resolution model that processes data
 import os
 import urllib
 import zipfile
-from pathlib import Path
-
-current_directory = Path.cwd()  # Get the current directory
-folders = [folder for folder in current_directory.iterdir() if folder.is_dir()]
-
-print(folders)
 from .models import create_EMDiffuse
 from .core import praser as Praser
 from emdiffuse_conifg import EMDiffuseConfig
