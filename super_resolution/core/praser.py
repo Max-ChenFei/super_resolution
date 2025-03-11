@@ -7,7 +7,7 @@ from functools import partial
 import importlib
 from types import FunctionType
 import shutil
-
+import pkg_resources
 
 def init_obj(opt, logger, *args, default_file_name='default file', given_module=None, init_type='Network',
              **modify_kwargs):
@@ -103,10 +103,21 @@ def dict2str(opt, indent_l=1):
 
 def parse(args):
     json_str = ''
-    with open(args.config, 'r') as f:
+    # Locate the config file inside the installed package
+    config_path = pkg_resources.resource_filename('super_resolution', args.config)
+
+    # Ensure the file exists
+    if not os.path.exists(config_path):
+        raise FileNotFoundError(f"Config file not found: {config_path}")
+
+    with open(config_path, 'r') as f:
         for line in f:
             line = line.split('//')[0] + '\n'
             json_str += line
+    # with open(args.config, 'r') as f:
+    #     for line in f:
+    #         line = line.split('//')[0] + '\n'
+    #         json_str += line
     opt = json.loads(json_str, object_pairs_hook=OrderedDict)
 
     ''' replace the config context using args '''
