@@ -6,7 +6,7 @@ import copy
 import os
 import shutil
 import torch.nn as nn
-import core.util as Util
+from ..core import util as Util
 from warmup_scheduler import GradualWarmupScheduler
 
 

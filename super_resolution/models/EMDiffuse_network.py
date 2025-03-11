@@ -4,7 +4,7 @@ from inspect import isfunction
 from functools import partial
 import numpy as np
 from tqdm import tqdm
-from core.base_network import BaseNetwork
+from ..core.base_network import BaseNetwork
 
 
 class Network(BaseNetwork):

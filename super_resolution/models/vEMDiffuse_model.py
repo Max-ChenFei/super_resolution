@@ -6,8 +6,8 @@ import torch.nn as nn
 import tqdm
 
 import core.util as Util
-from core.base_model import BaseModel
-from core.logger import LogTracker
+from ..core.base_model import BaseModel
+from ..core.logger import LogTracker
 
 
 class EMA():

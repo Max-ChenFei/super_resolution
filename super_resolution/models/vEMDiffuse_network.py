@@ -6,7 +6,7 @@ import numpy as np
 import torch
 from tqdm import tqdm
 
-from core.base_network import BaseNetwork
+from ..core.base_network import BaseNetwork
 
 
 class Network(BaseNetwork):
