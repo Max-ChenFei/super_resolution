@@ -34,7 +34,7 @@
       "which_dataset": {
         // import designated dataset using arguments
         "name": [
-          "data.dataset",
+          "super_resolution.data.dataset",
           "vEMDiffuseTrainingDatasetVolume"
         ],
         // import Dataset() class / function(not recommend) from data.dataset.py (default is [data.dataset.py])
@@ -99,7 +99,7 @@
     "which_model": {
       // import designated  model(trainer) using arguments
       "name": [
-        "models.vEMDiffuse_model",
+        "super_resolution.models.vEMDiffuse_model",
         "DiReP"
       ],
       // import Model() class / function(not recommend) from models.EMDiffuse_model.py (default is [models.EMDiffuse_model.py])
@@ -124,7 +124,7 @@
       // import designated list of networks using arguments
       {
         "name": [
-          "models.vEMDiffuse_network",
+          "super_resolution.models.vEMDiffuse_network",
           "Network"
         ],
         // import Network() class / function(not recommend) from default file (default is [models/EMDiffuse_network.py])
