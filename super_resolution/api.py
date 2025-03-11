@@ -10,7 +10,7 @@ from pathlib import Path
 current_directory = Path.cwd()  # Get the current directory
 folders = [folder for folder in current_directory.iterdir() if folder.is_dir()]
 
-print(f"Number of folders: {len(folders)}")
+print(folders)
 from .models import create_EMDiffuse
 from .core import praser as Praser
 from emdiffuse_conifg import EMDiffuseConfig
