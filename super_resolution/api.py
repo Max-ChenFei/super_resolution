@@ -3,6 +3,12 @@ A Python API for the EMDiffuse Super-Resolution model that processes data
  directly as input and provides output without relying on file I/O.
 """
 import os
+current_directory = os.getcwd()  # Get current directory
+files = [f for f in os.listdir(current_directory) if os.path.isfile(os.path.join(current_directory, f))]
+
+print("Files in current directory:")
+for file in files:
+    print(file)
 import urllib
 import zipfile
 from pathlib import Path
