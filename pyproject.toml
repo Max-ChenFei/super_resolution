@@ -11,8 +11,6 @@ readme = "README.md"
 requires-python = ">=3.6"
 dependencies = []  # Add dependencies here
 
-[tool.setuptools]
-packages = { find = { where = ["."] } }  # Fix format
 
 [tool.setuptools.packages.find]
 where = ["."]
