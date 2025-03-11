@@ -1,7 +1,7 @@
 import torch
 import tqdm
-from core.base_model import BaseModel
-from core.logger import LogTracker
+from ..core.base_model import BaseModel
+from ..core.logger import LogTracker
 import copy
 import os
 import shutil
