@@ -22,7 +22,7 @@ def create_model(**cfg_model):
 
 def define_network(logger, opt, network_opt):
     """ define network with weights initialization """
-    net = init_obj(network_opt, logger, default_file_name='models.network', init_type='Network')
+    net = init_obj(network_opt, logger, default_file_name='super_resolution.models.network', init_type='Network')
 
     if opt['phase'] == 'train':
         logger.info('Network [{}] weights initialize using [{:s}] method.'.format(net.__class__.__name__,
@@ -33,11 +33,11 @@ def define_network(logger, opt, network_opt):
 
 
 def define_loss(logger, loss_opt):
-    return init_obj(loss_opt, logger, default_file_name='models.loss', init_type='Loss')
+    return init_obj(loss_opt, logger, default_file_name='super_resolution.models.loss', init_type='Loss')
 
 
 def define_metric(logger, metric_opt):
-    return init_obj(metric_opt, logger, default_file_name='models.metric', init_type='Metric')
+    return init_obj(metric_opt, logger, default_file_name='super_resolution.models.metric', init_type='Metric')
 
 
 def create_EMDiffuse(opt):
